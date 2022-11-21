@@ -54,7 +54,7 @@ import django.core.serializers
 import django.db
 import graphql
 import graphql.error
-import graphql.execution.executors.asyncio
+#import graphql.execution.executors.asyncio
 import promise
 import rx
 
@@ -622,7 +622,7 @@ class GraphqlWsConsumer(ch_websocket.AsyncJsonWebsocketConsumer):
                         register_middleware, *self.middleware, wrap_in_promise=False
                     ),
                     allow_subscriptions=True,
-                    executor=graphql.execution.executors.asyncio.AsyncioExecutor(),
+                    #executor=graphql.execution.executors.asyncio.AsyncioExecutor(),
                 )
             )
 
